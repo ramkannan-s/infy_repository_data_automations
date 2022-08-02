@@ -40,4 +40,4 @@ while IFS= read -r line; do
     fi
 done < $FILE_NAME
 
-### sample cmd to run - ./createTempRepository.sh https://ramkannans-sbx.dev.gcp.devopsacc.team admin ****
+### sample cmd to run - ./updateRepoDiffConfigJPD.sh diffFile.txt http://35.208.78.203:8082 https://ramkannans-sbx.dev.gcp.devopsacc.team admin **** create/update
