@@ -26,13 +26,11 @@ while IFS= read -r line; do
         echo -e "\n"
     elif [[ $line == *"-"* ]]; then
         projectdelete=$(echo $line | cut -d "-" -f2- | xargs)
-        echo -e "\nDelete Repo ==> $projectdelete"
+        echo -e "\nDelete Project ==> $projectdelete"
         curl -XDELETE -H "Authorization: Bearer ${JPD_AUTH_TOKEN}" "$TARGET_JPD_URL"/access/api/v1/projects/"$projectdelete"
     else 
         echo -e "\nInvalid Input"
     fi
 done < $FILE_NAME
-
-exit 1
 
 ### sample cmd to run - ./updateProjectDiffConfigJPD.sh diffFile.txt http://35.208.78.203:8082 https://ramkannan.jfrog.io **** ****

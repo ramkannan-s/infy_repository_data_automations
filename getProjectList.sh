@@ -10,7 +10,7 @@ SOURCE_JPD_URL="${1:?please enter JPD URL. ex - http://35.208.78.203:8082}"
 AUTH_TOKEN="${2:?please provide auth bearer token . ex - access token}"
 
 ### define variables
-reposfile="project_list.txt"
+reposfile="project-list.txt"
 
 ### Run the curl API 
 rm -rf *.json

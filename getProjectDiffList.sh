@@ -7,7 +7,7 @@ set -u
 
 getList() {
     echo $1
-    curl -XGET -H "Authorization: Bearer ${3}" ${1}/access/api/v1/projects -s | jq -r '.[].project_key' > "$projectfile"_"$2"
+    curl -XGET -H "Authorization: Bearer ${3}" ${1}/access/api/v1/projects -s | jq 'sort' | jq -r '.[].project_key' > "$projectfile"_"$2"
     cat "$projectfile"_"$2"
     echo -e "\n" 
 }
