@@ -1,9 +1,8 @@
 #!/bin/bash
 
 SOURCE_JPD_URL="${1:?please enter JPD URL. ex - https://ramkannans-sbx.dev.gcp.devopsacc.team}"
-TARGET_JPD_URL="${2:?please enter JPD URL. ex - https://ramkannans-apac-sbx.dev.gcp.devopsacc.team}"
-USER_NAME="${3:?please provide the username in JPD . ex - admin}"  ### common credentials across 3 JPD's
-USER_TOKEN="${4:?please provide the user pwd or token or API Key . ex - password}"  ### common credentials across 3 JPD's
+USER_NAME="${2:?please provide the username in JPD . ex - admin}"  ### common credentials across 3 JPD's
+USER_TOKEN="${3:?please provide the user pwd or token or API Key . ex - password}"  ### common credentials across 3 JPD's
 
 permissions_target_list="permissions_target_list.txt"
 
@@ -28,5 +27,5 @@ while IFS= read -r permissions; do
             cat $permissions.json
         fi
     done < "$permissions"_UserList.txt
-    curl -XPUT -u $USER_NAME:$USER_TOKEN "$TARGET_JPD_URL/artifactory/api/security/permissions/$permissions" -s -d @$permissions.json -H "Content-Type: application/json"
+    curl -XPUT -u $USER_NAME:$USER_TOKEN "$SOURCE_JPD_URL/artifactory/api/security/permissions/$permissions" -s -d @$permissions.json -H "Content-Type: application/json"
 done < $permissions_target_list
