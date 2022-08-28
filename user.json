@@ -1,0 +1,16 @@
+{
+  "name" : "",
+  "email" : "",
+  "admin" : false,
+  "policyManager" : false,
+  "watchManager" : false,
+  "reportsManager" : false,
+  "profileUpdatable" : true,
+  "internalPasswordDisabled" : true,
+  "groups" : [ "readers" ],
+  "realm" : "saml",
+  "offlineMode" : false,
+  "disableUIAccess" : false,
+  "mfaStatus" : "NONE",
+  "status" : "ENABLED"
+}
