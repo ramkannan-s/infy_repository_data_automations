@@ -15,7 +15,7 @@ FILE_NAME="perm_delete.txt"
 
 ### Run the curl API reading from file
 while IFS= read -r permdelete; do
-    echo -e "\nDelete Repo ==> $permdelete"
+    echo -e "\nDeleting the permission ==> $permdelete"
     curl -X DELETE -u "${USER_NAME}":"${USER_TOKEN}" "$SOURCE_JPD_URL"/artifactory/api/security/permissions/"$permdelete"
 done < $FILE_NAME
 
