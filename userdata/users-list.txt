@@ -1,1 +1,4 @@
 test
+test-perm
+india
+auto_admin

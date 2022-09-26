@@ -1,0 +1,17 @@
+{
+  "name" : "preksha.patel@ad.infosys.com",
+  "email" : "preksha.patel@ad.infosys.com",
+  "admin" : false,
+  "policyManager" : false,
+  "watchManager" : false,
+  "reportsManager" : false,
+  "profileUpdatable" : true,
+  "internalPasswordDisabled" : true,
+  "groups" : [ "readers" ],
+  "lastLoggedInMillis" : 0,
+  "realm" : "saml",
+  "offlineMode" : false,
+  "disableUIAccess" : false,
+  "mfaStatus" : "NONE",
+  "status" : "ENABLED"
+}
