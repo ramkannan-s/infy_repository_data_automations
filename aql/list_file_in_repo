@@ -1,0 +1,1 @@
+items.find({"repo": "audi-blr-maven-local"}).include("name", "path", "size").sort({"$asc" : ["name", "path"]})
