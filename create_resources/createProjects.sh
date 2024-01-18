@@ -1,9 +1,11 @@
 #! /bin/bash
 
 ### Get Arguments
-projectname="${4:?please enter the project name}"
-projectid="${5:?please enter the project count}"
-userid="${6:?please enter the username to make as projectadmin}"
+SOURCE_JPD_URL="${1:?please enter the jpd_url}"
+JPD_AUTH_TOKEN="${2:?please enter the access token}"
+projectname="${3:?please enter the project name}"
+projectid="${4:?please enter the project count}"
+userid="${5:?please enter the username to make as projectadmin}"
 
 project_template_cmd="cat projectTemplate.json | jq '.display_name = \"$projectname\"' | jq '.project_key = \"$projectid\"' > project.json"
 eval "$project_template_cmd"
