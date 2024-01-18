@@ -9,4 +9,4 @@ replace_cmd="jq '.key = \"$repo_key\" | .packageType = \"$packagetype\" | .rclas
 eval "$replace_cmd" > repository-update-template.json
 cat repository-update-template.json
 #jf rt repo-delete $repo_key --quiet
-jf rt repository-update-template.json
+jf rt repo-create repository-update-template.json
