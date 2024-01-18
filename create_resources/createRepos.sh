@@ -1,5 +1,7 @@
 #! /bin/bash
 
+set -o nounset
+
 ### Get Arguments
 repotype="${1:?please enter the repo type. ex - local/remote/virtual/federated}"
 packagetype="${2:?please enter the package type type. ex - docker/maven/helm}"
