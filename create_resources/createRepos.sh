@@ -8,9 +8,9 @@ repo_key="${3:?please enter reponame}"
 if [ "$repo_key" = "local" ] ; then
   replace_cmd="jq '.key = \"$repo_key\" | .packageType = \"$packagetype\" | .rclass = \"$repotype\"' repository-template.json"
 elif [ "$repo_key" = "remote" ] ; then
-  replace_cmd="jq '.key = \"$repo_key\" | .packageType = \"$packagetype\" | .rclass = \"$repotype\"' repository-template.json"
+  replace_cmd="jq '.key = \"$repo_key\" | .packageType = \"$packagetype\" | .rclass = \"$repotype\" | .url = \"$url\" | .username = \"$username\" | .password = \"$password\"' repository-template.json"
 elif [ "$repo_key" = "virtual" ] ; then
-  replace_cmd="jq '.key = \"$repo_key\" | .packageType = \"$packagetype\" | .rclass = \"$repotype\"' repository-template.json"
+  replace_cmd="jq '.key = \"$repo_key\" | .packageType = \"$packagetype\" | .rclass = \"$repotype\" | .defaultDeploymentRepo = \"$defaultDeploymentRepo\" | .repositories = \"$repositories\"' repository-template.json"
 elif [ "$repo_key" = "federated" ] ; then
   replace_cmd="jq '.key = \"$repo_key\" | .packageType = \"$packagetype\" | .rclass = \"$repotype\"' repository-template.json"
 fi
