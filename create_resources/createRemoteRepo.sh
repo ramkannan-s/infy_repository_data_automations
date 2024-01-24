@@ -10,7 +10,7 @@ url="${4:?please enter URL for Remote repo}"
 username="${5:?please enter username for Remote repo}"
 password="${6:?please enter password for Remote repo}"
 
-replace_cmd="jq '.key = \"$repo_key\" | .packageType = \"$packagetype\" | .rclass = \"$repotype\" | .url = \"$url\" | .username = \"$username\" | .password = \"$password\"' repository-template.json"
+replace_cmd="jq '.key = \"$repo_key\" | .packageType = \"$packagetype\" | .rclass = \"$repotype\" | .url = \"$url\" | .username = \"$username\" | .password = \"$password\" | del(.members)' repository-template.json"
 eval "$replace_cmd" > repository-update-template.json
 cat repository-update-template.json
 jf rt repo-create repository-update-template.json
