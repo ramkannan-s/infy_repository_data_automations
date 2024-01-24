@@ -6,5 +6,12 @@
   "url": "",
   "username": "",
   "password": "",
-  "rclass" : ""
+  "rclass" : "",
+  "members" : [ {
+    "url" : "",
+    "enabled" : true
+  }, {
+    "url" : "",
+    "enabled" : true
+  } ]
 }
